@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order a Cake | Jana's Cakes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="order.html">Order</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="container">
+        <h1>Order a Cake 🎂</h1>
+        <p>Fill out the form below to place your order, and we'll get in touch soon!</p>
+
+        <form action="https://formspree.io/f/xjkgnvwd" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="cake_type">Select a Cake:</label>
+            <select id="cake_type" name="cake_type">
+                <option value="buttercream">Buttercream Cake</option>
+                <option value="fondant">Fondant Cake</option>
+                <option value="custom">Custom Design</option>
+            </select>
+
+            <label for="date">Pickup/Delivery Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="message">Special Requests:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <input type="hidden" name="_next" value="https://your-username.github.io/janas-cakes/thankyou.html">
+            
+            <button type="submit">Place Order</button>
+        </form>
+    </div>
+
+</body>
+</html>
+
